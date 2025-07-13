@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Situations - Oakridge NPS</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="hero small-hero">
+    <img src="images/emergency.png" alt="Emergency Situations Banner">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Emergency Situations</h1>
+      <p><em>"THOSE VISITORS PRESSED WHAT?" - Sr. Operative</em></p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="articles-section">
+        <h2>Articles</h2>
+  
+        <div class="articles-grid initial-articles">
+          <a href="prestart.html" class="article-card">
+            <img src="images/Pre Start.png" alt="Pre-Start Guide" />
+            <h3>Pre-Start Guide</h3>
+          </a>
+          <a href="index.html" class="article-card">
+            <img src="images/banner3.png" alt="Home" />
+            <h3>Home</h3>
+          <a href="shutdown.html" class="article-card">
+            <img src="images/Shutdown_reactor.webp" alt="Shutdown Guide" />
+            <h3>Shutdown Guide</h3>
+          </a>
+        </div>
+  
+        <div class="articles-grid more-articles hidden" aria-hidden="true">
+            <a href="startup.html" class="article-card">
+                <img src="images/Startup.png" alt="Start-Up Guide" />
+                <h3>Start-Up Guide</h3>
+              </a>
+          <a href="control-room.html" class="article-card">
+            <img src="images/The_control_room.webp" alt="Control Room Layout" />
+            <h3>Control Room Layout</h3>
+          </a>
+          <a href="locations.html" class="article-card">
+            <img src="images/Locations.webp" alt="Locations" />
+            <h3>Locations</h3>
+          </a>
+        </div>
+  
+        <button class="view-more-btn" aria-expanded="false">View More</button>
+      </section>
+
+    <section class="location-section">
+      <h2>Emergency Procedure</h2>
+      <p>Many situations can lead to an emergency procedure. Use the quick links below to navigate to each scenario:</p>
+
+      <div class="emergency-nav">
+        <a href="#high-pressure">High RPV Pressure</a>
+        <a href="#high-temperature">High RPV Temperature</a>
+        <a href="#high-water">High Water Level</a>
+        <a href="#low-water">Low Water Level</a>
+        <a href="#very-low-water">Very Low Water Level</a>
+        <a href="#fuel-leak">Fuel Channel Leak</a>
+        <a href="#loop">Loss of Offsite Power (LOOP)</a>
+      </div>
+
+      <div class="emergency-box" id="high-pressure">
+        <h3>High RPV Pressure</h3>
+        <p><strong>Description:</strong> The pressure inside the Reactor Pressure Vessel (RPV) is above safe limits. This may be due to steam buildup or low steam output. High pressure can damage the reactor.</p>
+        <ul>
+          <li>Open relief valves to release pressure.</li>
+          <li>Insert control rods to reduce reactor power if needed.</li>
+          <li>Increase turbine/bypass steam flow to lower pressure in the reactor.</li>
+          <li>Monitor RPV pressure instruments.</li>
+          <li>Press AZ-5 if pressure remains too high or continues to rise.</li>
+        </ul>
+      </div>
+
+      <div class="emergency-box" id="high-temperature">
+        <h3>High RPV Temperature</h3>
+        <p><strong>Description:</strong> The temperature inside the RPV is higher than safety limits. This may result from inadequate coolant flow and can cause fuel damage.</p>
+        <ul>
+          <li>Verify circulation pumps are running.</li>
+          <li>Insert control rods to lower temperature if recirc pumps are not enough.</li>
+          <li>Monitor temperature gauges constantly.</li>
+          <li>Initiate SCRAM if a critical temperature is reached.</li>
+        </ul>
+      </div>
+
+      <div class="emergency-box" id="high-water">
+        <h3>High Water Level</h3>
+        <p><strong>Description:</strong> Excessive water level in the primary coolant circuit. Can cause water hammer or flooding. Often due to feedwater over-injection.</p>
+        <ul>
+          <li>Reduce feedwater flow.</li>
+          <li>Open recirculation drain valves to lower water level.</li>
+          <li>Monitor water level indicators.</li>
+        </ul>
+      </div>
+
+      <div class="emergency-box" id="low-water">
+        <h3>Low Water Level</h3>
+        <p><strong>Description:</strong> Water level in the core is below normal. This reduces cooling and increases fuel overheating risk.</p>
+        <ul>
+          <li>Do not increase reactor power.</li>
+          <li>Increase feedwater injection.</li>
+          <li>Monitor water levels closely.</li>
+          <li>Be ready to activate ECCS.</li>
+          <li>Press AZ-5 if levels continue to drop.</li>
+        </ul>
+      </div>
+
+      <div class="emergency-box" id="very-low-water">
+        <h3>Very Low Water Level</h3>
+        <p><strong>Description:</strong> Critical low water level alarm. Core may be exposed. Immediate action required.</p>
+        <ul>
+          <li>Press AZ-5 immediately.</li>
+          <li>Activate ECCS to raise water level.</li>
+          <li>Ensure feedwater pumps are running.</li>
+          <li>Monitor RPV temperature and pressure.</li>
+        </ul>
+      </div>
+
+      <div class="emergency-box" id="fuel-leak">
+        <h3>Fuel Channel Leak</h3>
+        <p><strong>Description:</strong> Fuel channel ruptured. May cause power surges and water level drop beyond feedwater recovery capability.</p>
+        <ul>
+          <li>Activate all recirculation pumps to full speed.</li>
+          <li>Open all relief valves.</li>
+          <li><strong>Do NOT SCRAM</strong> - use shutdown rod controls.</li>
+          <li>Start OCC pump (Offline Core Cooling).</li>
+          <li>Monitor all core parameters.</li>
+          <li>Call engineer if shutdown is successful.</li>
+          <li><strong>Note:</strong> 80% chance of catastrophic failure. Good luck.</li>
+        </ul>
+      </div>
+
+      <div class="emergency-box" id="loop">
+        <h3>Loss of Offsite Power (LOOP)</h3>
+        <p><strong>Description:</strong> Offsite power grid has failed. All systems run on onsite diesel generators. Core cooling is critical.</p>
+        <ul>
+          <li>Start 1 EDG (Emergency Diesel Generator).</li>
+          <li>Ensure core cooling systems and ECCS are operational.</li>
+          <li>Monitor temperature, pressure, and water level.</li>
+          <li>Initiate ECCS if water level is low.</li>
+          <li>SCRAM the reactor if unstable.</li>
+          <li>Wait for return of offsite power.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Oakridge NPS Wiki</p>
+  </footer>
+</body>
+</html>
