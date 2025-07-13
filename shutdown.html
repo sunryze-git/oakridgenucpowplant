@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oakridge Nuclear Power Station - Shutdown Guide</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="hero small-hero">
+    <div class="hero-overlay"></div>
+    <img src="images/Shutdown_reactor.webp" alt="Shutdown Reactor" />
+    <div class="hero-content">
+      <h1>Shutdown Guide</h1>
+      <p>Shutting down the RBMK-1500 reactor safely is a critical skill to protect your team and prevent catastrophic failure.</p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="articles-section">
+        <h2>Articles</h2>
+  
+        <div class="articles-grid initial-articles">
+          <a href="prestart.html" class="article-card">
+            <img src="images/Pre Start.png" alt="Pre-Start Guide" />
+            <h3>Pre-Start Guide</h3>
+          </a>
+          <a href="index.html" class="article-card">
+            <img src="images/banner3.png" alt="Home" />
+            <h3>Home</h3>
+          </a>
+          <a href="startup.html" class="article-card">
+            <img src="images/Startup.png" alt="Start-Up Guide" />
+            <h3>Start-Up Guide</h3>
+          </a>
+        </div>
+  
+        <div class="articles-grid more-articles hidden" aria-hidden="true">
+          <a href="emergency.html" class="article-card">
+            <img src="images/emergency.png" alt="Emergency Situations" />
+            <h3>Emergency Situations</h3>
+          </a>
+          <a href="control-room.html" class="article-card">
+            <img src="images/The_control_room.webp" alt="Control Room Layout" />
+            <h3>Control Room Layout</h3>
+          </a>
+          <a href="locations.html" class="article-card">
+            <img src="images/Locations.webp" alt="Locations" />
+            <h3>Locations</h3>
+          </a>
+        </div>
+  
+        <button class="view-more-btn" aria-expanded="false">View More</button>
+      </section>
+
+    <section class="location-section">
+      <h2>Overview</h2>
+      <p>
+        Shutting down the RBMK-1500 reactor at Oakridge is a skill all operators must master. It can save your job or prevent a devastating nuclear fallout.
+      </p>
+      <p>
+        Typically, shutdowns occur at the end of a shift or for realism purposes. Follow this guide carefully to ensure safety.
+      </p>
+      <p>
+        <strong>Note:</strong> If the reactor becomes unstable (low water, high pressure, or scram), refer immediately to the <a href="emergency.html" style="color:#80c7ff;">Emergency Procedures</a> page.
+      </p>
+    </section>
+
+    <section class="location-section">
+      <h2>Contents</h2>
+      <ol>
+        <li>Stable Shutdown Procedures
+          <ol>
+            <li>Pre-Shutdown Checklist</li>
+            <li>High Power Procedure with Two Turbines (4100 MW and over)</li>
+            <li>Operational Power Procedure with One Turbine (2100 MW and over)</li>
+            <li>Low Power with no Turbine (2100 MW and under)</li>
+          </ol>
+        </li>
+      </ol>
+    </section>
+
+    <section class="location-section">
+      <h2>Stable Shutdown Procedures</h2>
+      <p>
+        Follow the Pre-Shutdown Checklist, then proceed with the appropriate shutdown procedure depending on reactor power output. For High and Operational Power procedures, at least one turbine must be active. Otherwise, use the Low Power procedure.
+      </p>
+      <p>
+        <em>Reminder:</em> Decreasing or disabling Recirculation Pumps can temporarily increase power; insert more control rods to maintain balance.
+      </p>
+    </section>
+
+    <section class="location-section">
+      <h3>Pre-Shutdown Checklist</h3>
+      <ul>
+        <li>Confirm Hotwell levels are above 25.</li>
+        <li>Confirm Reactor Water Temperature is less than 400 (increase recirculation pumps if needed).</li>
+        <li>Confirm Reactor Water Level is above 230 inches (increase feedwater and condensate pumps equally if needed).</li>
+        <li>Confirm Reactor Water Pressure is below 450 PSI.</li>
+        <li>Confirm Deaerator Water Level is above 40 inches.</li>
+        <li>Confirm ECCS Pressurized Tank is over 1200 PSI.</li>
+        <li>Confirm ECCS Water Tank is over 200 inches.</li>
+        <li>Confirm OCC Circ Pump 1 and 2 are active.</li>
+        <li>Confirm Condenser A and B temperatures are less than 60.</li>
+        <li>Confirm Auto G1 Offload is active at the electrical panel.</li>
+        <li>Confirm G1&lt;64A Primer is primed.</li>
+        <li>Confirm Auto Scram is enabled.</li>
+        <li>Confirm Offline Core Cooling is off.</li>
+        <li>Confirm Isolation Valves are open.</li>
+        <li>Confirm Feed Limiter Valve is enabled and set at 0%.</li>
+        <li>Confirm Auto Control Rods are enabled and set to current reactor power.</li>
+      </ul>
+      <p><strong>You are now ready for shutdown.</strong></p>
+    </section>
+
+    <section class="location-section">
+      <h3>High Power Procedure with Two Turbines (4100 MW and Over)</h3>
+      <ol>
+        <li>Set Auto Bypass of both turbines to 150.</li>
+        <li>When generator load of both turbines drops below 300, disable Condenser Coolant Pumps A3 and B3.</li>
+        <li>When generator load reaches 150, set speed of Condenser Coolant Pumps A2 and B2 to 1.</li>
+        <li>Set Auto Control Rods to 3000. If rods cannot reach 3000 automatically, manually insert rods in reverse startup order until reaching 3000.</li>
+        <li>Slowly disable Recirc Pumps C2 and C1; set Recirc Pumps B2 and B1 speed to 2. Maintain temperature between 256 and 400.</li>
+        <li>Set Feedwater Pump 2 speed to 1; reduce a Condensate Pump speed by 1.</li>
+        <li>When reactor power stabilizes at 3000 MW, trip Turbine B.</li>
+        <li>Lower Turbine B bypass to zero.</li>
+        <li>Disable Condenser Coolant Pumps B1 and B2; wait for system to stabilize.</li>
+        <li>Set Auto Bypass of Turbine A to 100.</li>
+        <li>Disable Condenser Coolant Pump A2.</li>
+        <li>Set Auto Control Rods to 2100; pull rods if necessary.</li>
+        <li>Set Recirc Pumps B2 and B1 speed to 2; maintain temperature between 230 and 370.</li>
+        <li>Slowly disable Feedwater Pump 2; set Feedwater Pump 1 speed to 2; reduce a Condensate Pump speed by 1.</li>
+        <li>Confirm Site Usage power is less than 38 MW.</li>
+        <li>Call Grid Controller and click Clearance.</li>
+        <li>Click on the G1&lt;64A button.</li>
+        <li>Slowly increase Turbine A bypass until flow meter is slightly below zero; keep pressure meter stable (ignore Reverse Power Alarm).</li>
+        <li>At the Electrical Panel, disable Generator A switch to desync turbine (ensure 64A-M is off).</li>
+        <li>Slowly lower Turbine A valve and increase bypass.</li>
+        <li>Disable Condenser Coolant Pump A1.</li>
+        <li>Once Turbine A valve reaches 0% and bypass is 100%, set Auto Bypass to 1100; pull rods if necessary.</li>
+        <li>Set Reactor Mode to Mode 1.</li>
+        <li>Slowly disable Recirc Pumps B2 and B1; maintain temperature between 100 and 300.</li>
+        <li>Set Feedwater Pump 1 speed to 1; set Condensate Pump 1 speed to 1.</li>
+        <li>Confirm Reactor Water Pressure is less than 80 PSI.</li>
+        <li>Confirm Reactor Water Temperature is less than 250.</li>
+        <li>Enable Offline Core Cooling and wait for temperature to drop below 200 and Reactor Water Pressure to 0 PSI.</li>
+        <li>Scram the reactor and disable Auto Control Rods.</li>
+        <li>Disable Feedwater Pump 1 and Condensate Pump 1.</li>
+        <li>Wait for system stabilization.</li>
+        <li><strong>Shutdown complete.</strong></li>
+      </ol>
+    </section>
+
+    <section class="location-section">
+      <h3>Operational Power Procedure with One Turbine (2100 MW and Over)</h3>
+      <ol>
+        <li>Set Turbine Auto Bypass to 100.</li>
+        <li>Confirm Site Usage is less than 38 MW.</li>
+        <li>Call Grid Controller and click Clearance.</li>
+        <li>Click the G1&lt;64A button.</li>
+        <li>Slowly increase turbine bypass until flow meter is slightly below zero (ignore Reverse Power Alarm).</li>
+        <li>Disable Generator A switch at the Electrical Panel to desync turbine (ensure 64A-M is off).</li>
+        <li>Slowly decrease turbine valve and increase turbine bypass; keep pressure stable.</li>
+        <li>Once turbine valve is at 0% and bypass at 100%, set Auto Control Rods to 1100; pull rods if needed.</li>
+        <li>Disable Condenser Coolant Pumps.</li>
+        <li>Set Reactor Mode to Mode 1.</li>
+        <li>Disable Recirc Pumps B1 and B2 if enabled.</li>
+        <li>Set Feedwater Pump 1 and Condensate Pump 1 speeds to 1.</li>
+        <li>Confirm Reactor Water Pressure is less than 80 PSI.</li>
+        <li>Confirm Reactor Water Temperature is less than 250.</li>
+        <li>Enable Offline Core Cooling and wait for temperature below 200 and pressure at 0 PSI.</li>
+        <li>Scram reactor and disable Auto Control Rods.</li>
+        <li>Disable Feedwater Pump 1 and Condensate Pump 1.</li>
+        <li>Wait for stabilization.</li>
+        <li><strong>Shutdown complete.</strong></li>
+      </ol>
+    </section>
+
+    <section class="location-section">
+      <h3>Low Power with No Turbine (2100 MW and Under)</h3>
+      <ol>
+        <li>Set Auto Control Rods to 1100.</li>
+        <li>Set Recirc Pumps A1 and A2 speed to 3 if not already set.</li>
+        <li>Set Reactor Mode to Mode 1.</li>
+        <li>Set Feedwater Pump 1 and Condensate Pump 1 speeds to 1.</li>
+        <li>Confirm Reactor Water Pressure is less than 80 PSI.</li>
+        <li>Confirm Reactor Water Temperature is less than 250.</li>
+        <li>Enable Offline Core Cooling and wait for temperature below 200 and pressure at 0 PSI.</li>
+        <li>Scram reactor and disable Auto Control Rods.</li>
+        <li>Disable Feedwater Pump 1 and Condensate Pump 1.</li>
+        <li>Wait for stabilization.</li>
+        <li><strong>Shutdown complete.</strong></li>
+      </ol>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Oakridge NPS Wiki</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Control Room</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="hero small-hero">
+    <img src="images/The_control_room.webp" alt="Control Room Banner"  />
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Control Room</h1>
+      <p><em>"These Visitors keep messing around the panel! Where the hell is security!" - Jr. Operative</em></p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="articles-section">
+      <h2>Articles</h2>
+      <div class="articles-grid initial-articles">
+        <a href="prestart.html" class="article-card">
+          <img src="images/Pre Start.png" alt="Pre-Start Guide" />
+          <h3>Pre-Start Guide</h3>
+        </a>
+        <a href="index.html" class="article-card">
+          <img src="images/banner3.png" alt="Home" />
+          <h3>Home</h3>
+        </a>
+        <a href="startup.html" class="article-card">
+          <img src="images/Startup.png" alt="Start-Up Guide" />
+          <h3>Start-Up Guide</h3>
+        </a>
+      </div>
+      <div class="articles-grid more-articles hidden" aria-hidden="true">
+        <a href="emergency.html" class="article-card">
+          <img src="images/emergency.png" alt="Emergency Situations" />
+          <h3>Emergency Situations</h3>
+        </a>
+        <a href="shutdown.html" class="article-card">
+          <img src="images/Shutdown_reactor.webp" alt="Shutdown Guide" />
+          <h3>Shutdown Guide</h3>
+        </a>
+        <a href="locations.html" class="article-card">
+          <img src="images/Locations.webp" alt="Locations" />
+          <h3>Locations</h3>
+        </a>
+      </div>
+      <button class="view-more-btn" aria-expanded="false">View More</button>
+    </section>
+
+    <section class="location-section">
+      <h2>Overview</h2>
+      <div class="location-content">
+        <img src="images/The_control_room.webp" alt="Control Room Overview"/>
+        <div>
+          <p>The control room is found on Level 3, accessible via the Lower Level. It houses most major controls for Oakridge’s operations, including control rods, turbines, and electrical systems.</p>
+          <p>Operators use this room to monitor and adjust plant behavior in real time. Pumps here feature three speeds: red (1), yellow (2), and green (3).</p>
+          <h3>How to Access</h3>
+          <ol>
+            <li>Enter through Staff Intake.</li>
+            <li>Proceed to the elevator and select LL (Lower Level).</li>
+            <li>Use Plant Access A and take the elevator to L3.</li>
+            <li>Turn left twice to reach the Control Room.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="location-section">
+      <h2>Rod Control Panel</h2>
+      <div class="location-content">
+        <img src="images/Rod_Control_Panel.webp" alt="Rod Control Panel" class="enlargeable"/>
+        <div>
+          <p>The main feature of this panel is the <a class="b">rod control</a>, used by pressing the control rods of choice, followed by pressing the remove or insert buttons. The <a class="y">automatic controls rods</a> can be utilized to stabilize the reactor power at the desired amount. The main display shows how many rods have been removed and by how much, while the heat distribution display shows how hot each sector of the reactor is. The <a class="g">modes</a> represent what stage of operation the reactor is in: Shutdown (0), Startup (1), Operating (2). The <a class="gr"> Offline Core Cooling</a> along with the shutdown control rods keep the reactor cold while not in operation. In the event of high reactor water, the recirc drains can be used to dump out the excess water. In the event of an emergency, the <a class="r">АЗ-5</a> can be utilized to quickly insert the rods back into the reactor. If you are feeling brave however, you can turn off the automatic АЗ-5.
+
+            Displays and monitors are highlighted in pink.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="location-section">
+      <h2>Turbines</h2>
+      <div class="location-content">
+        <img src="images/Turbine_Panel.webp" alt="Rod Control Panel" class="enlargeable"/>
+        <div>
+          <p>The turbines generate power, which makes you money (peak). Steam makes its way from the steam drums, and into the turbines, spinning the turbine blades. Before making money however, you must sync to the grid, and to do that, you must get the speed near 1800 <a class="b">RPM</a></p>
+          <p>In order to start the turbines, first of all you must disengage turning gear, by calling engineering. Before starting, you should enable the <a class="gy">synchroscope</a>, and open the lid to the sync button. After this, you may start opening the <a class="g">turbine valve</a>, which lets steam into the turbine, spinning it. During this, you may follow the <a class="o">flow gauge</a>, which tells you how close you are to reaching 1800 RPM; Higher than 0 means you will overshoot, lower means you will undershoot. It is suggested you overshoot before you get near 1800 since the ascent is quite slow.</p>
+          <p>If the <a class="o">pressure</a> is too high, consider opening the <a class="y"> bypass valve</a>. It vents steam into the condenser, skipping the turbines entirely.</p>
+          <p>Once you get close to 1800 RPM, watch the synchroscope; You will be able to successfully sync by pressing the sync button once the needle reaches the top (watch the green light). A range of 1785-1815 RPM is recommended, unless you have a quick reaction time. A sync should be followed by a quick rise in the turbine valve, to prevent a trip due to reverse power, after that, raise it to 100% and close bypass (beware of <a class="b">vibration</a>). If you failed to sync, wait until the turbine drops below 600 RPM, and then try again.</p>
+          <p>The <a class="gr">bleed valve</a> is used to share steam between the 2 loops, however, contradictory to the guide, it is not recommended you use it while syncing turbine B, as it can lead to both turbines tripping.</p>
+          <p>After going online, you should utilize the <a class="y">automatic bypass</a> to hold the <a class="b">demand</a>; Divide the demand by 2 and insert it into both keypads.</p>
+          <p>Load rejection can occur if there is a sudden drop in power usage (demand). It is mainly an issue before going online, when too many pumps are turned off at once.</p>
+          <p>The proper way to shut down the turbines is to lower power, desync the turbine (via the electrical panel, with the generator breakers), lower the RPM and open the bypass.</p>
+          <p>The option to <a class="r">manually trip</a> the turbines is also there, if you want to use it for some reason.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="location-section">
+      <h2>Condenser coolant</h2>
+      <div class="location-content">
+        <img src="images/Condenser_Coolant_Panel.webp" alt="Rod Control Panel" class="enlargeable"/>
+        <div>
+          <p>The <a class="g">condenser coolant pumps</a> control the rate at which steam can condense back into condensate (water recovered from the condenser). Each condenser has its own loop, <a class="r">loop A</a> and <a class="y">loop B</a>. A coolant is pumped through the condenser to cool the steam back into water; this heat is then transported to a cooling tower, where it can be cooled to remain effective.</p>
+          <p>High <a class="o">condenser coolant temperature</a> is caused by an insufficient number of pumps and can lead to high outlet pressure in the turbines, followed by vibration and if left unchecked, tripping the turbine; However, an abundance of pumps can hinder efficiency, resulting in less points being earned.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="location-section">
+      <h2>Condensate, Hotwell and Make-up</h2>
+      <div class="location-content">
+        <img src="images/Condensate_Panel.webp" alt="Rod Control Panel" class="enlargeable"/>
+        <div>
+          <p>The <a class="g">condensate pumps </a>move water from the hotwell to the deaerator, controlling the deaerator level. The hotwell collects the water (condensate) from the condenser, which is located below it. To prevent the deaerator from being overfilled, the overflow valve (located on the deaerator panel) should be on at all times.</p>
+          <p>Similarly to the feedwater pumps, the condensate pumps can also cavitate and trip; This is caused by a low <a class="b">hotwell level</a>.</p>
+          <p>If the hotwell level is too low, it may be refilled with the <a class="o">make-up pump</a>. To use it, activate the pump and open one of the three valves on the right (ECCS, Hotwell A, Hotwell B).</p>
+          <p>The <a class="y">automatic hotwell control</a> can be used to prevent the hotwell tanks from getting overfilled, and the level can be set via the keypad. For efficiency and a hotter water temperature, higher levels are generally better.</p>
+          <p>If the hotwell tank gets too full, the hotwell drains can be used (located on in the ECCS section, to be added).</p>
+          <p>The controls for the <a class="gr">OOC pumps</a> can also be seen on this panel.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="location-section">
+      <h2>Deaerator</h2>
+      <div class="location-content">
+        <img src="images/Deaerator_panel.webp" alt="Rod Control Panel" class="enlargeable"/>
+        <div>
+          <p>The deaerator's true purpose is to remove impurities from the feedwater, using steam in order to heat the water up. This power plant features 2 deaerators, and similarly to the condenser coolant, has 2 loops (<a class="r">loop A</a> and <a class="y">loop B</a>), receiving steam from their respective steam drums, and water from the condensers.</p>
+          <p>The deaerator has 2 valves, those being the <a class="g">steam input</a> and <a class="b">relief</a>. The steam input lets more steam in, raising the temperature, and increasing the pressure sligtly, while the relief vents steam out, lowering the pressure.</p>
+          <p>The <a class="gy">A-B Bleed valve</a> mixes the water of the 2 deaerators, helping the water level equal out on both deaerators.</p>
+          <p>For proper deaeration (water cleaning), it needs to be configured at 250C and 100PSI.</p>
+          <p>The <a class="gr">water level</a> of the deaerator is mainly managed on the condensate panel, however this panel features the <a class="o">overflow valve</a>, which prevents flooding of the deaerators.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="location-section">
+      <h2>Feedwater</h2>
+      <div class="location-content">
+        <img src="images/Feedwater_Panel.webp" alt="Rod Control Panel" class="enlargeable"/>
+        <div>
+        <p>The <a class="g">Feedwater</a> controls how much enters the RPV (soon to be steam drums); The water level can be checked on the rod control panel. The pumps take water from the deaerator; If the deaerator level is too low, the pumps will start to cavitate and eventually trip. An insufficient number of them will cause the water level to drop, which can cause the reactor to scram.</p>
+        <p>The <a class="o">feed limiter valve</a> is similar to the overflow valve; it prevents water from flooding the reactor pressure vessel. Turning the switch on will make it automatic by limiting the feedwater intake upwards of 50% to keep the water level; however, it can also be used in manual mode, via the keypad (with the switch off).</p>
+        <p>The <a class="gr">isolation valves</a> prevent feedwater from entering and steam from exiting the <a class="gr">steam drums</a>. A closed <a class="gr">isolation valve</a> will cause the feedwater pumps to trip if they are already on or turned on.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="location-section">
+      <h2>Recirculation</h2>
+      <div class="location-content">
+        <img src="images/Recirculation.webp" alt="Rod Control Panel" class="enlargeable"/>
+        <div>
+        <p>The <a class="g">recirculation pumps</a> take water from the reactor and run it back through the steam drums; Two loops (<a class="r">Loop A</a> and <a class="y">Loop B</a>) for their respective steam drums. Their main function in-game is trading heat for steam for the turbines.</p>
+        <p>The heat of the reactor fuel can be seen on the <a class="b">heat distribution display</a>. A reactor that is too cold won't boil steam and might flood the reactor; meanwhile, a reactor that is too hot has a higher risk of fuel channel leaks. It is recommended to find the sweet spot for the best efficiency.</p>
+        <p>(generally between 900 and 1200°F)</p>
+        <p>Additionally, the <a class="gr">OCC system</a> and the <a class="gr">isolation valve switches</a> can be seen.</p>
+        </div>
+      </div>
+    </section>
+
+    <div id="image-modal" class="modal">
+      <img src="" alt="Zoomed Image" id="modal-img">
+    </div>
+
+  </main>
+
+  <footer>
+    &copy; 2025 Oakridge Nuclear Power Station. All rights reserved.
+  </footer>
+</body>
+</html>
