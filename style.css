@@ -482,6 +482,79 @@
   .hidden {
     display: none;
   }
+
+  .npc-section {
+    margin-top: 2rem;
+  }
+  
+  .npc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+  
+  .npc-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #1f1f1f;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  }
+  
+  .npc-main {
+    flex: 1;
+  }
+  
+  .npc-info {
+    margin-top: 1rem;
+    border-top: 1px solid #5a5353;
+    padding-top: 1rem;
+    text-align: center;
+  }
+  
+  .npc-info img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .npc-meta p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+    color: #ffffff;
+  }
+  
+  .dialogue-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .dialogue-table th,
+  .dialogue-table td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    text-align: left;
+    background-color: #181616;;
+  }
+  
+  .dialogue-table th {
+    background-color: #181616;;
+  }
+  
+  ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+  
+
+  a {
+    color: #80c7ff;
+    text-decoration: none;
+  }
   
   /* Footer */
   footer {
