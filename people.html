@@ -1,0 +1,260 @@
+<!-- INDEX.HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oakridge Nuclear Power Station</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <img src="images/Workers Banner.png" alt="Oakridge Banner" />
+    <div class="hero-content">
+      <h1>Workers Of The Plant</h1>
+      <p>Some people work day and night at the plant and these are some of them.</p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="articles-section">
+        <h2>Articles</h2>
+  
+        <div class="articles-grid initial-articles">
+          <a href="prestart.html" class="article-card">
+            <img src="images/Pre Start.png" alt="Pre-Start Guide" />
+            <h3>Pre-Start Guide</h3>
+          </a>
+          <a href="index.html" class="article-card">
+            <img src="images/banner3.png" alt="Home" />
+            <h3>Home</h3>
+          </a>
+          <a href="shutdown.html" class="article-card">
+            <img src="images/Shutdown_reactor.webp" alt="Shutdown Guide" />
+            <h3>Shutdown Guide</h3>
+          </a>
+        </div>
+  
+        <div class="articles-grid more-articles hidden" aria-hidden="true">
+          <a href="emergency.html" class="article-card">
+            <img src="images/emergency.png" alt="Emergency Situations" />
+            <h3>Emergency Situations</h3>
+          </a>
+          <a href="control-room.html" class="article-card">
+            <img src="images/The_control_room.webp" alt="Control Room Layout" />
+            <h3>Control Room Layout</h3>
+          </a>
+          <a href="locations.html" class="article-card">
+            <img src="images/Locations.webp" alt="Locations" />
+            <h3>Locations</h3>
+          </a>
+          <a href="credits.html" class="article-card">
+            <img src="images/credits.webp" alt="credits" />
+            <h3>Credits</h3>
+          </a>
+          <a href="startup.html" class="article-card">
+            <img src="images/Startup.png" alt="Start-Up Guide" />
+            <h3>Start-Up Guide</h3>
+          </a>
+          <a href="RBMK-1500.html" class="article-card">
+            <img src="images/banner5.webp" alt="credits" />
+            <h3>RBMK-1500</h3>
+          </a>
+          
+        </div>
+  
+        <button class="view-more-btn" aria-expanded="false">View More</button>
+      </section>
+
+    <section id="game-description" class="npc-section">
+        <h2>Meet The Workers</h2>
+        <br>
+        
+        <div class="npc-grid">
+      
+          <!-- Carson -->
+          <div class="npc-card">
+            <div class="npc-main">
+              <h2>Carson</h2>
+              <aside class="npc-info">
+                <img src="images/Carson.webp" alt="Carson Portrait">
+                <figcaption>A photo of Carson, at their post.</figcaption>
+                <br>
+                <p>Carson is an Internal Security Guard at the ONPS. He currently only unlocks a door if you have the correct ID.</p>
+                <div class="npc-meta">
+                  <p><strong>Occupation:</strong> Internal Security Guard</p>
+                  <p><strong>Species:</strong> Human (?)</p>
+                  <p><strong>Gender:</strong> Unknown</p>
+                  <p><strong>Height:</strong> 5+ Studs</p>
+                  <p><strong>Eye Color:</strong> Black Dots</p>
+                  <p><strong>Debut:</strong> v2.3 Pre Public</p>
+                </div>
+              </aside>
+              <br><br>
+              <h2>Dialogue</h2>
+              <table class="dialogue-table">
+                <thead>
+                  <tr>
+                    <th>First Interaction</th>
+                    <th>Second Interaction</th>
+                    <th>Third Interaction</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Man I'm taking a nap, make this quick.</td>
+                    <td>Card!</td>
+                    <td>Good, get out and keep us safe.</td>
+                  </tr>
+                  <tr>
+                    <td>Well Well Well [Display Name], Welcome Back</td>
+                    <td>Gimme ID.</td>
+                    <td>I'm watching you.</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>see you.</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4>Without ID Card:</h4>
+              <table class="dialogue-table">
+                <thead>
+                  <tr>
+                    <th>First Interaction</th>
+                    <th>Second Interaction</th>
+                    <th>Third Interaction</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Do you want to be fired?</td>
+                    <td>...</td>
+                    <td>Don't waste my time.</td>
+                  </tr>
+                </tbody>
+              </table>
+    
+            </div>
+          </div>
+          <!-- Hugh -->
+          <div class="npc-card">
+            <div class="npc-main">
+              <h2>Hugh</h2>
+              <aside class="npc-info">
+                <img src="images/Hugh.webp" alt="Hugh Portrait">
+                <figcaption>A photo of Hugh while at his post.</figcaption>
+                <br>
+                <p>Hugh is the exterior security guard guarding the car entrance. Hugh is generally friendly to all people, no mater what atrocities they may have committed.</p>
+                <div class="npc-meta">
+                  <p><strong>Occupation:</strong> Exterior Guard</p>
+                  <p><strong>Species:</strong> Human (?)</p>
+                  <p><strong>Gender:</strong> Unknown</p>
+                  <p><strong>Height:</strong> 5 Studs</p>
+                  <p><strong>Eye Color:</strong> Black Dots</p>
+                  <p><strong>Debut:</strong> v1.0</p>
+                </div><br><br>
+                <h2>Dialogue</h2>
+              </aside>
+
+              
+              
+              <table class="dialogue-table">
+                <thead>
+                  <tr>
+                    <th>First Interaction</th>
+                    <th>Second Interaction</th>
+                    <th>Third Interaction</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>[Display Name]!!! I havent seen you in a while!</td>
+                    <td>May I have your ID?</td>
+                    <td>Stay Safe!!</td>
+                  </tr>
+                  <tr>
+                    <td>Oh i've been here as long as i can remember... Oh hey [Display Name].</td>
+                    <td>Card Please!</td>
+                    <td>All Good!</td>
+                  </tr>
+                  <tr>
+                    <td>How you're doing today [Display Name]?</td>
+                    <td>Do you have your card?</td>
+                    <td>Get outta my sight!</td>
+                  </tr>
+                  <tr>
+                    <td>Hey [Display Name], look'n Snazzy!</td>
+                    <td>...</td>
+                    <td>See Ya!</td>
+                  </tr>
+                  <tr>
+                    <td>[Display Name]!!! :D</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Working hard or hardly working, right [Display Name]!</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Im taking a nap, dont bother me.</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Hey there [Display Name], welcome back!</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Your New, Right [Display Name]?</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4>Without ID Card:</h4>
+              <table class="dialogue-table">
+                <thead>
+                  <tr>
+                    <th>First Interaction</th>
+                    <th>Second Interaction</th>
+                    <th>Third Interaction</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>...</td>
+                    <td>Are you trying to be funny?</td>
+                    <td>Not Quite</td>
+                  </tr>
+                  <tr>
+                    <td>Hrmmm</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+    
+            </div>
+      
+
+          </div>
+      
+        </div>
+      </section>
+
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Koyot Digital</p>
+  </footer>
+</body>
+</html>
