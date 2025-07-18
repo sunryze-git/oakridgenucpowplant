@@ -31,7 +31,7 @@ To maximise the chances of your PR being accepted, only modify the files you're 
 - Keep images related to the game and make sure they're not huge file sizes
 
 **Styling:**
-- `style.css` - Feel free to improve the layout or fix broken styles, but try not to completely redesign everything
+- `style.css` - Feel free to improve the layout or fix broken styles, but try not to completely redesign everything. Just make sure to notify @ShrimpQuack of the change.
 
 ### 🔴 Hands Off (For Now)
 
