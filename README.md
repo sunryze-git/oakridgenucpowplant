@@ -9,7 +9,7 @@ Thanks for helping improve the Oakridge Nuclear Power Station website! This guid
 ### ✅ Allowed Files to Edit:
 - `index.html` – Main landing page content and article links
 - `prestart.html`, `startup.html`, `shutdown.html`, etc. – Individual article pages
-- `images/` – Add new images (must be optimized `.webp` or `.png`)
+- `images/` – Add new images (must be `.webp` or `.png`)
 - `style.css` – Only if you’re improving layout or fixing broken styles
 
 ### ❌ Do NOT:
