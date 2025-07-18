@@ -48,13 +48,14 @@ Your PR will be reviewed before merging — we check for:
 - Visual or mobile layout issues
 - Spelling/grammar consistency
 
-##Style & Writing Guidelines
+## Style & Writing Guidelines
 - Keep language professional and friendly
 - Use second person (“you will...”) for guides
 - Keep titles in Title Case: Pre-Start Guide, Emergency Situations, etc.
 - Break long content into short paragraphs
 
-
+## Need Help?
+Open an issue or tag @ShrimpQuack on Discord with any questions or to request edit access.
 
 
 
