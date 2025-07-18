@@ -93,17 +93,15 @@ If you're new to editing HTML, focus on changing the text content rather than th
 **Image Problems:**
 Remember that only `.webp` and `.png` files work, and they should be compressed to keep the site loading quickly. Large image files can make pages painfully slow to load.
 
----
-###### Turn around.
----
-###### I mean it.
----
-###### Last warning!
----
-###### LAST, LAST WARNING!
----
+## License
 
-## 🚀 Technical Deployment Stuff
+This project is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
+
+---
+---
+---
+---
+---
 
 *This section is for the hosting service and doesn't need to be edited by content contributors.*
 
