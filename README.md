@@ -36,6 +36,26 @@ Thanks for helping improve the Oakridge Nuclear Power Station website! This guid
 
 ```
 
+## Pull Request Guidelines
+When you’ve made your changes:
+
+Create a pull request with a clear title and summary.
+
+Your PR will be reviewed before merging — we check for:
+
+- Broken links
+- HTML syntax errors
+- Visual or mobile layout issues
+- Spelling/grammar consistency
+
+##Style & Writing Guidelines
+- Keep language professional and friendly
+- Use second person (“you will...”) for guides
+- Keep titles in Title Case: Pre-Start Guide, Emergency Situations, etc.
+- Break long content into short paragraphs
+
+
+
 
 
 ---
