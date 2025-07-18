@@ -1,3 +1,39 @@
+# Contributing to the Oakridge Nuclear Power Station Wiki
+
+Thanks for helping improve the Oakridge Nuclear Power Station website! This guide will walk you through how to contribute safely and effectively.
+
+---
+
+## 🔧 Editing Content
+
+### ✅ Allowed Files to Edit:
+- `index.html` – Main landing page content and article links
+- `prestart.html`, `startup.html`, `shutdown.html`, etc. – Individual article pages
+- `images/` – Add new images (must be optimized `.webp` or `.png`)
+- `style.css` – Only if you’re improving layout or fixing broken styles
+
+### ❌ Do NOT:
+- Change the structure of core components (header, footer)
+- Add scripts or external plugins without discussion
+- Upload non-game-related or uncompressed images
+
+---
+
+## ✍️ How to Edit a Page
+
+1. Open the file you want to change (e.g. `index.html`)
+2. Edit only inside the appropriate `<section>` tags, such as:
+
+```html
+<section id="game-description">
+  <h2>Welcome to the Team</h2>
+  <p>...your edits here...</p>
+</section>
+
+
+
+
+
 ---
 name: HTML Starter
 slug: html-starter-with-analytics
