@@ -57,7 +57,7 @@ Your PR will be reviewed before merging — we check for:
 ## Need Help?
 Open an issue or tag @ShrimpQuack on Discord with any questions or to request edit access.
 
-
+*Ignore Below that is for the hosting service*
 
 ---
 name: HTML Starter
