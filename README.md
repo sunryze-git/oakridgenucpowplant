@@ -1,65 +1,111 @@
-# Contributing to the Oakridge Nuclear Power Station Wiki
+# ONPS Wiki
 
-Thanks for helping improve the Oakridge Nuclear Power Station website! This guide will walk you through how to contribute safely and effectively.
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
+![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg?style=for-the-badge)
+![GitHub issues](https://img.shields.io/github/issues/DuckQuack001/oakridgenucpowplant?style=for-the-badge)
+![GitHub stars](https://img.shields.io/github/stars/DuckQuack001/oakridgenucpowplant?style=for-the-badge)
+
+
+Hey there! Thanks for wanting to improve the Oakridge Nuclear Power Station wiki. This guide will show you the important stuff and help you to contribute without accidentally breaking anything important.
+
+## 🎯 Quick Start
+
+Before attempting anything, let us brief you. This wiki is basically a knowledge base for nuclear power station procedures, and we want to keep it accurate and helpful for everyone who uses it. Don't worry though as the contributing is pretty straightforward once you know what's what.
+
+## 📂 What You Can (and Can't) Touch
+
+To maximise the chances of your PR being accepted, only modify the files you're permitted to. Think of it as a shared workspace where organisation matters.
+
+### 🟢 Safe to Edit
+
+**Content Pages:**
+- `index.html` - This is your main landing page with all the navigation links
+- `prestart.html`, `startup.html`, `shutdown.html` - The actual procedure pages that people come here to read
+- Any other HTML files that follow the same pattern
+
+**Images:**
+- Anything in the `images/` folder - just make sure you're using `.webp` or `.png` files
+- Keep images related to the game and make sure they're not huge file sizes
+
+**Styling:**
+- `style.css` - Feel free to improve the layout or fix broken styles, but try not to completely redesign everything
+
+### 🔴 Hands Off (For Now)
+
+**Core Scripts:**
+- `script.js` - This handles important functionality, so ping @ShrimpQuack before you mess with it
+- `Middleware.js` - This is routing stuff that keeps the site working properly, if you touch it in your PR there is a 99% chance it will be rejected
+
+**Structure:**
+- Don't rearrange the header or footer components
+- Avoid adding random scripts or plugins without talking to someone first
+- Don't delete files unless you're really sure about it
+
+## ✏️ Making Your First Edit (Or How Not To Break Everything)
+
+For the full ritual, check out the [CONTRIBUTING_GUIDE.md](./CONTRIBUTING_GUIDE.md).
+
+*This README is starting to look like a giant novel. So I moved the boring but necessary bit to a separate file because nobody needs a novel to learn how to submit a pull request.*
+
+## 📖 Writing Guidelines
+
+Good writing makes all the difference when people are trying to learn procedures or find information quickly. Some guidelines are below.
+
+### 🎯 Voice and Style
+
+* **Talk Directly to the Reader:**
+Use "you" when writing instructions. Instead of "operators should check the pressure," write "you should check the pressure." This makes guides feel more personal.
+
+* **Keep It Conversational:**
+You don't need to sound like a textbook. Professional doesn't mean boring. Write like you're explaining something to a colleague who's standing right next to you.
+
+### 🏷️ Formatting Standards
+
+* **Headers and Titles:**
+Use Title Case for headings (like "Pre-Start Guide" or "Emergency Situations"). This keeps everything looking consistent and makes navigation easier.
+
+* **Break Things Up:**
+Long walls of text are hard to read, especially when someone's trying to follow a procedure or act fast. Use shorter paragraphs and break up complex ideas into chunks.
+
+* **Technical Terms:**
+When you use terminology, give a quick explanation or context. Not everyone has the same level of experience, and a brief clarification can save someone A LOT of confusion. Don't just say ECCS, give a meaning or a link to a page with meaning!
+
+## 🆘 Getting Help
+
+Stuck on something? Everyone needs help sometimes, and there are a few ways to get unstuck.
+
+### 🏷️ Where to Ask
+
+**Technical Issues:**
+If you're having trouble with the code side of things, open an Issue in the repository or reach out to @ShrimpQuack on Discord. Be specific about what you're trying to do and what's going wrong.
+
+**Content Questions:**
+Not sure if your changes fit the site's goals? Ask! Open an Issue and ask. It's better to check than to spend time on something that might not work out.
+
+### 🏷️ Common Gotchas
+
+**HTML Syntax:**
+If you're new to editing HTML, focus on changing the text content rather than the structural tags. When in doubt, look at how similar content is formatted on other pages.
+
+**Image Problems:**
+Remember that only `.webp` and `.png` files work, and they should be compressed to keep the site loading quickly. Large image files can make pages painfully slow to load.
 
 ---
-
-## 🔧 Editing Content
-
-### ✅ Allowed Files to Edit:
-- `index.html` – Main landing page content and article links
-- `prestart.html`, `startup.html`, `shutdown.html`, etc. – Individual article pages
-- `images/` – Add new images (must be `.webp` or `.png`)
-- `style.css` – Only if you’re improving layout or fixing broken styles
-
-### ❌ Do NOT:
-- Edit `script.js` without ShrimpQuack Being notified about it prior.
-- Change the structure of core components (header, footer)
-- Add scripts or external plugins without discussion
-- Upload non-game-related or uncompressed images
-- Remove files
-- Edit `Middleware.js`
-  
-
+###### Turn around.
+---
+###### I mean it.
+---
+###### Last warning!
+---
+###### LAST, LAST WARNING!
 ---
 
-## ✍️ How to Edit a Page
+## 🚀 Technical Deployment Stuff
 
-1. Open the file you want to change (e.g. `index.html`)
-2. Edit only inside the appropriate `<section>` tags, such as:
-
-```html
-<section id="game-description">
-  <h2>Welcome to the Team</h2>
-  <p>...your edits here...</p>
-</section>
-
-```
-
-## Pull Request Guidelines
-When you’ve made your changes:
-
-Create a pull request with a clear title and summary.
-
-Your PR will be reviewed before merging — we check for:
-
-- Broken links
-- HTML syntax errors
-- Visual or mobile layout issues
-- Spelling/grammar consistency
-
-## Style & Writing Guidelines
-- Keep language professional and friendly
-- Use second person (“you will...”) for guides
-- Keep titles in Title Case: Pre-Start Guide, Emergency Situations, etc.
-- Break long content into short paragraphs
-
-## Need Help?
-Open an issue or tag @ShrimpQuack on Discord with any questions or to request edit access.
-
----
-
-*Ignore Below that is for the hosting service*
+*This section is for the hosting service and doesn't need to be edited by content contributors.*
 
 ---
 name: HTML Starter
