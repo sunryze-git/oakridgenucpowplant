@@ -13,12 +13,12 @@ Thanks for helping improve the Oakridge Nuclear Power Station website! This guid
 - `style.css` – Only if you’re improving layout or fixing broken styles
 
 ### ❌ Do NOT:
-- Edit script.js without ShrimpQuack Being notified about it prior.
+- Edit `script.js` without ShrimpQuack Being notified about it prior.
 - Change the structure of core components (header, footer)
 - Add scripts or external plugins without discussion
 - Upload non-game-related or uncompressed images
 - Remove files
-- Edit Middleware.js
+- Edit `Middleware.js`
   
 
 ---
