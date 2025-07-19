@@ -37,7 +37,7 @@ To maximise the chances of your PR being accepted, only modify the files you're 
 
 **Core Scripts:**
 - `script.js` - This handles important functionality, so ping @ShrimpQuack before you mess with it
-- `Middleware.js` - This is routing stuff that keeps the site working properly, if you touch it in your PR there is a 99.100% chance it will be rejected
+- `Middleware.js` - This is routing stuff that keeps the site working properly, if you touch it in your PR there is a 99.9% chance it will be rejected
 
 **Structure:**
 - Don't rearrange the header or footer components
