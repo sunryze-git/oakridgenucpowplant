@@ -1,0 +1,150 @@
+<!-- INDEX.HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oakridge Nuclear Power Station</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <img src="images/banner1.webp" alt="Oakridge Banner" />
+    <div class="hero-content">
+      <h1>Ranks and Points</h1>
+      <p>"You don't know about the ranks around here? What are they teaching the new trainees? We work for a nuclear powerplant for gods sake!" - Supervisor.</p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="articles-section">
+        <h2>Articles</h2>
+  
+        <div class="articles-grid initial-articles">
+          <a href="prestart.html" class="article-card">
+            <img src="images/Pre Start.png" alt="Pre-Start Guide" />
+            <h3>Pre-Start Guide</h3>
+          </a>
+          <a href="index.html" class="article-card">
+            <img src="images/banner3.png" alt="Home" />
+            <h3>Home</h3>
+          </a>
+          <a href="shutdown.html" class="article-card">
+            <img src="images/Shutdown_reactor.webp" alt="Shutdown Guide" />
+            <h3>Shutdown Guide</h3>
+          </a>
+        </div>
+  
+        <div class="articles-grid more-articles hidden" aria-hidden="true">
+          <a href="emergency.html" class="article-card">
+            <img src="images/emergency.png" alt="Emergency Situations" />
+            <h3>Emergency Situations</h3>
+          </a>
+          <a href="control-room.html" class="article-card">
+            <img src="images/The_control_room.webp" alt="Control Room Layout" />
+            <h3>Control Room Layout</h3>
+          </a>
+          <a href="locations.html" class="article-card">
+            <img src="images/Locations.webp" alt="Locations" />
+            <h3>Locations</h3>
+          </a>
+          <a href="credits.html" class="article-card">
+            <img src="images/credits.webp" alt="credits" />
+            <h3>Credits</h3>
+          </a>
+          <a href="startup.html" class="article-card">
+            <img src="images/Startup.png" alt="Start-Up Guide" />
+            <h3>Start-Up Guide</h3>
+          </a>
+          <a href="people.html" class="article-card">
+            <img src="images/Workers Banner.png" alt="Workers of the Plant" />
+            <h3>Workers of the Plant</h3>
+          </a>
+          <a href="RBMK-1500.html" class="article-card">
+            <img src="images/banner5.webp" alt="credits" />
+            <h3>RBMK-1500</h3>
+          </a>
+        </div>
+  
+        <button class="view-more-btn" aria-expanded="false">View More</button>
+      </section>
+      <br><br><br>
+      <div class="emergency-nav">
+        <a href="#visitor">Visitor</a>
+        <a href="#trainee">Trainee</a>
+        <a href="#junior-op">Junior Operator</a>
+        <a href="#sr-op">Senior Operator</a>
+        <a href="#supervisor">Supervisor</a>
+        <a href="#shift-manager">Shift Manager</a>
+        <a href="#plant-director">Plant Director</a>
+      </div>
+
+    <section id="introduction">
+        <h3>Introduction</h3>
+        <br>
+        <p>The Ranks and Points system in this game is fairly simple. To rank up you just need to keep the reactor and the turbines connected to the grid and meet demand. At the end of your shift (At 00:00) you will earn a paycheck. Each time you get your paycheck your 'Money' turns into points. In other words your main priority is to sell as much power as possible.</p>
+        <br>
+    </section>
+    <hr><br>
+    <section id="visitor">
+        <h3>Visitor</h3><br>
+        <p>Points required: 0 - 4,999</p><br>
+        <p>Welcome! You're new around here! You can ask for help or just wait for a while and let everyone else do the work for you. But that's no fun! You want to press buttons and stuff and produce unlimited energy for the people! (And for your pocket to be filled with money) So it is recommended you to check out the guide![1] We're glad to have you on board.</p>
+    </section>
+    <br><hr><br>
+    <section id="trainee">
+        <h3>Trainee</h3><br>
+        <p>Points required: 5,000 - 74,999</p><br>
+        <p>You've got the hang of this facility. usually more reliable than your visitors Trainees can assist around the nuclear powerplant! They can assist Jr. Operators and Sr. Operators on some menial tasks. Yet they usually aren't skilled enough to maintain a nuclear reactor solo. You can somewhat rely on them for a while before you need to intervene to stop a reactor going in a meltdown.</p>
+    </section>
+    <br><hr><br>
+    <section id="junior-op">
+        <h3>Junior Operator</h3><br>
+        <p>Points required: 75,000 - 499,999</p>
+        <p>Bonus: 10%</p><br>
+        <p>Skilled personnel. Can handle most of the emergencies with ease. Yet they can't remain calm when a visitor presses 'SCRAM' and now they need to re-do the whole reactor start up sequence... Again.</p>
+    </section>
+    <br><hr><br>
+    <section id="sr-op">
+        <h3>Senior Operator</h3><br>
+        <p>Points required: 500,000 - 1,249,999</p>
+        <p>Bonus: 35%</p><br>
+        <p>Considered 'One of the best.' Minimal errors, deal with emergencies, keep the plant running at 100% efficiency. There won't be anyone else like them who can handle the powerplant as good as them. You can rely onto them for anything and everything.</p>
+        <i>Can get access to a Sr. Operator bypass key</i>
+    </section>
+    <br><hr><br>
+    <section id="supervisor">
+        <h3>Supervisor</h3><br>
+        <p>Points required: 1,250,000 - 2,499,999</p>
+        <p>Bonus: 70%</p><br>
+        <p>You've reached it! The Supervisor title! You should be proud of yourself. That is no small feat! You can finally oversee those who are below you! Just be prepared for chaos and prepare to discipline trainees. Good luck!</p>
+        <i>Can get access to a Sr. Operator bypass key</i>
+    </section>
+    <br><hr><br>
+    <section id="shift-manager">
+        <h3>Shift Manager</h3><br>
+        <p>Points required: 2,500,000 - 4,999,999</p>
+        <p>Bonus: 115%</p><br>
+        <p>At this point all nuclear reactors are too easy for you. Emergencies? You've gotten used to them. Critical failures? Can fix them in your sleep. You probably aren't even in the plant at all. Probably at some other place managing shifts... Right?</p>
+        <i>Can get access to a Sr. Operator bypass key</i>
+    </section>
+    <br><hr><br>
+    <section id="plant-director">
+        <h3>Plant Director</h3><br>
+        <p>Points required: 5,000,000+</p>
+        <p>Bonus: 170%</p><br>
+        <p>You've made it. The very top. Excellent. You know the place inside out. Can handle emergencies with no effort at all. You don't even feel panic when everything goes to hell. Because you know with you here. Everything will be fine. No matter how dire the situation becomes.</p>
+        <i>Can get access to a Sr. Operator bypass key</i>
+    </section>
+
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Koyot Digital</p>
+  </footer>
+</body>
+</html>
