@@ -111,6 +111,7 @@ html {
   transform: translateY(-3px);
   box-shadow: 0 0 10px rgba(128, 199, 255, 0.25);
 }
+
 .emergency-box {
   background-color: #1c1c1c;
   border: 1px solid #444;
@@ -213,12 +214,22 @@ html {
 .b {
   color: #72b0eb;
 }
+
+.db {
+  color: #074a89;
+}
+
 .y {
   color: #d2c62f;
 }
 .g {
   color: #4ed171;
 }
+
+.dg {
+  color: #217c00;
+}
+
 .gr {
   color: #6e7c8c;
 }
@@ -231,30 +242,6 @@ html {
 .gy {
   color: #c1e94b;
 }
-
-
-
-/* .grid {
-  width: 92%;
-  height: 500px;
-  margin: 2rem;
-}
-
-.grid iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(128, 199, 255, 0.2);
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
-}
-
-.int-grid{
-  padding: 10%;
-}       No longer Needed.  */
 
 .modal {
   display: none;
