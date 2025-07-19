@@ -27,7 +27,7 @@ To maximise the chances of your PR being accepted, only modify the files you're 
 - Any other HTML files that follow the same pattern
 
 **Images:**
-- Anything in the `images/` folder - just make sure you're using `.webp` or `.png` files
+- Anything in the `images/` folder - just make sure you're using `.webp` files
 - Keep images related to the game and make sure they're not huge file sizes
 
 **Styling:**
@@ -91,7 +91,7 @@ Not sure if your changes fit the site's goals? Ask! Open an Issue and ask. It's 
 If you're new to editing HTML, focus on changing the text content rather than the structural tags. When in doubt, look at how similar content is formatted on other pages.
 
 **Image Problems:**
-Remember that only `.webp` and `.png` files work, and they should be compressed to keep the site loading quickly. Large image files can make pages painfully slow to load.
+Remember that only `.webp` files work, and they should be compressed to keep the site loading quickly. Large image files can make pages painfully slow to load.
 
 ## License
 
