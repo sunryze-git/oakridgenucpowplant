@@ -1,10 +1,10 @@
   const heroImages = [
-    "images/banner1.webp",
-    "images/banner2.webp",
-    "images/banner3.png",
-    "images/banner4.webp",
-    "images/banner5.webp",
-    "images/banner6.webp"
+    "images/banners/banner1.webp",
+    "images/banners/banner2.webp",
+    "images/banners/banner3.png",
+    "images/banners/banner4.webp",
+    "images/banners/banner5.webp",
+    "images/banners/banner6.webp"
   ];
 
   let heroIndex = 0;
