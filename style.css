@@ -232,9 +232,19 @@ html {
   color: #c1e94b;
 }
 
-.grid{
+.grid {
+  width: 92%;
+  height: 500px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.grid iframe {
   width: 100%;
   height: 100%;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(128, 199, 255, 0.2);
 }
 
 .modal {
