@@ -37,16 +37,21 @@ To maximise the chances of your PR being accepted, only modify the files you're 
 
 **Core Scripts:**
 - `script.js` - This handles important functionality, so ping @ShrimpQuack before you mess with it
-- `Middleware.js` - This is routing stuff that keeps the site working properly, if you touch it in your PR there is a 99% chance it will be rejected
+- `Middleware.js` - This is routing stuff that keeps the site working properly, if you touch it in your PR there is a 99.100% chance it will be rejected
 
 **Structure:**
 - Don't rearrange the header or footer components
 - Avoid adding random scripts or plugins without talking to someone first
 - Don't delete files unless you're really sure about it
 
+## If Your New To Git/GitHub
+
+Yes, this stuff is complex, dont worry you can figure this out. to understand the terms like `push`, `fetch`, `pull` etc... we recomend reading [this artical](https://webtuu.com/blog/04/a-laymans-introduction-to-git).
+great, now that you have read that, you should understand the basic terms of git and git related stuff. to see how to contribute, check out the [How To Contribute For Dummies ](./How_To_Contribute_For_Dummies.md) file
+
 ## ✏️ Making Your First Edit (Or How Not To Break Everything)
 
-For the full ritual, check out the [CONTRIBUTING_GUIDE.md](./CONTRIBUTING_GUIDE.md).
+For the full ritual (Novel), check out the [CONTRIBUTING_GUIDE.md](./CONTRIBUTING_GUIDE.md).
 
 *This README is starting to look like a giant novel. So I moved the boring but necessary bit to a separate file because nobody needs a novel to learn how to submit a pull request.*
 
