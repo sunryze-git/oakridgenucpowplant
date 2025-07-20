@@ -4,17 +4,17 @@ Read this [Doc](./CONTRIBUTING_GUIDE.md) on how to write for the wiki, dont foll
 
 ### Do you have the github desktop app?
 
-### YES:
+  ### YES:
 
   great, please clone this repo, and edit the file you want to edit! (assumeing that you dont have a text editor please go to the second NO)
 
-### NO:
+  ### NO:
   ok, please download the [GitHub Desktop App](https://github.com/apps/desktop)
-    Do You have a text editor?
+### Do You have a text editor?
 
-### YES:
+  ### YES:
     great, please clone this repo, and edit the file you want to edit!
-### NO:
+  ### NO:
   Download [VS Code](https://code.visualstudio.com/download) or [Webstorm](https://www.jetbrains.com/webstorm/download/?section=windows) then clone this repo and edit the file you want to edit.
 
 ## To clone a repo
