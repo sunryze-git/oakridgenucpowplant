@@ -1,5 +1,5 @@
 ## To Contribute to the wiki with no prior expiriance
-Read this [Doc](./CONTRIBUTING_GUIDE.md) on how to write for the wiki, dont follow any instuctions for the other github app if you came from there.
+Read this [guide](./CONTRIBUTING.md) on how to write for the wiki, dont follow any instuctions for the other github app if you came from there.
 
 
 ### Do you have the github desktop app?
