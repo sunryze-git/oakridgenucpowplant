@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Emergency Situations - Oakridge NPS</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="credits.css">
   <script src="script.js" defer></script>
-   <link rel="apple-touch-icon" sizes="180x180" href="/images/Favicon/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/Favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/Favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/Favicon/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
@@ -97,15 +98,22 @@
       <div class="emergency-box" id="fuel-leak">
         <h3>Fuel Channel Leak</h3>
         <p><strong>Description:</strong> Fuel channel ruptured. May cause power surges and water level drop beyond feedwater recovery capability.</p>
+        <p class="disclaimer"><strong>SCRAM at your own risk</strong> - might cause power surge.</p>
         <ul>
-          <li>Activate all recirculation pumps to full speed.</li>
-          <li>Open all relief valves.</li>
-          <li><strong>Do NOT SCRAM</strong> - use shutdown rod controls.</li>
-          <li>Start OCC pump (Offline Core Cooling).</li>
-          <li>Monitor all core parameters.</li>
-          <li>Call engineer if shutdown is successful.</li>
-          <strong>Note:</strong> 80% chance of catastrophic failure. Good luck.
+          <li>ALL <a class="g">Recirculation Pumps</a> - SPEED 3</li>
+          <li>ALL <a class="b">Relief Valves</a> - OPEN</li>
+          <li>1 & 2 <a class="gr">OCC Pumps</a> - ENABLE</li>
+          <li><a class="r">Improvise</a> - GOOD LUCK</li>
         </ul>
+        <p><i><strong>IF SHUTDOWN SUCCESSFUL:</strong></i></p>
+        <ul>
+          <li>CALL Engineering - Repair Damaged Systems</li>
+        </ul>
+        <p><i><strong>IF SHUTDOWN UNSUCCESSFUL:</strong></i></p>
+        <ul>
+          <li>Smile for the IAEA report - you’re the next case study</li>
+        </ul>
+        <p class="disclaimer"><strong>NOTE:</strong> ~80% chance of catastrophic failure.</p>
       </div>
 
       <div class="emergency-box" id="loop">
