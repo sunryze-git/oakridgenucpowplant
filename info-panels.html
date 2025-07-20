@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oakridge Nuclear Power Station - Information Panels</title>
+  <script src="https://kit.fontawesome.com/a7bdae1ce6.js" crossorigin="anonymous"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/Favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Favicon/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero small-hero">
+    <div class="hero-overlay"></div>
+    <img src="images/Info Panels.webp" alt="Pre-Start Reactor" />
+    <div class="hero-content">
+      <h1>Information Panels</h1>
+      <p><em>What even is Pump Cavitation???</em></p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <div id="NavGrid-placeholder"></div>
+
+    <section class="location-section">
+        <br>
+        <h2>Information Panels</h2>
+        <br>
+        <br><p>Information Panels are what tell you the status of various systems within the nuclear facility. They provide real-time information, warnings, and critical alerts to the operators.</p> <br>
+        <br>
+        <br><p>Understanding some of the lights can be confusing, but the interactive graphic below can help.</p>
+        <br>
+        <br>
+
+        <details class="details">
+            <summary class="summary">Condenser Coolant Panel</summary>
+            <table class="info-table">
+                <tr>
+                    <td class="critical"><a href="#panel1">Coolant Pump A1 Trip</a></td>
+                    <td class="critical"><a href="#panel2">Coolant Pump A2 Trip</a></td>
+                    <td class="critical"><a href="#panel3">Coolant Pump B1 Trip</a></td>
+                    <td class="critical"><a href="#panel4">Coolant Pump B2 Trip</a></td>
+                </tr>
+                <tr> 
+                    <td class="critical"><a href="#panel5">Coolant Pump A3 Trip</a></td>
+                    <td class="critical"><a href="#panel6">Coolant Pump A4 Trip</a></td>
+                    <td class="critical"><a href="#panel7">Coolant Pump B3 Trip</a></td>
+                    <td class="critical"><a href="#panel8">Coolant Pump B4 Trip</a></td>
+                </tr>
+                <tr> 
+                    <td class="warning"><a href="#panel9">Coolant Loop A Dry</a></td>
+                    <td class="warning"><a href="#panel10">Coolant Loop B Dry</a></td>
+                    <td class="critical"><a href="#panel11">High Coolant Temp A</a></td>
+                    <td class="critical"><a href="#panel12">High Coolant Temp B</a></td>
+                </tr>
+            </table>
+        </details>
+
+        <details class="details">
+            <summary class="summary">Turbine A/B Panel</summary>
+            <table class="info-table">
+                <tr>
+                    <td class="critical"><a href="#panel1">Turbine Trip</a></td>
+                    <td class="info"><a href="#panel2">MAIN Turbine BRK.</a></td>
+                    <td class="info"><a href="#panel3">Generator Synced</a></td>
+                    <td class="critical"><a href="#panel4">High Bearing Vibration</a></td>
+                </tr>
+                <tr> 
+                    <td class="warning"><a href="#panel5">Reverse Power</a></td>
+                    <td class="warning"><a href="#panel6">Demand Unmet</a></td>
+                    <td class="critical"><a href="#panel7">High RPM</a></td>
+                    <td class="critical"><a href="#panel8">Turning Gear Engaged</a></td>
+                </tr>
+                <tr> 
+                    <td class="warning"><a href="#panel9">High Inlet Pressure</a></td>
+                    <td class="warning"><a href="#panel10">High Outlet Pressure</a></td>
+                    <td class="info"><a href="#panel11">Low RPM</a></td>
+                    <td class="critical"><a href="#panel12">Full Load Rejection</a></td>
+                </tr>
+            </table>
+        </details>
+
+        <details class="details">
+            <summary class="summary">Recirculation Panel</summary>
+            <table class="info-table">
+                <tr>
+                    <td class="info"><a href="#panel1">High RPV Temperature</a></td>
+                    <td class="warning"><a href="#panel2">Recirc Loop Dry</a></td>
+                    <td class="info"><a href="#panel3">Recirc Pump A2</a></td>
+                    <td class="info"><a href="#panel4">Recirc Pump A1</a></td>
+                </tr>
+                <tr> 
+                    <td class="info"><a href="#panel5">Low RPV Temperature</a></td>
+                    <td class="warning"><a href="#panel6">Core Water Low</a></td>
+                    <td class="info"><a href="#panel7">Recirc Pump B2</a></td>
+                    <td class="info"><a href="#panel8">Recirc Pump B1</a></td>
+                </tr>
+                <tr> 
+                    <td class="critical"><a href="#panel9">Recirc Pump Trip</a></td>
+                    <td class="critical"><a href="#panel10">Core Water Low Low</a></td>
+                    <td class="info"><a href="#panel11">Recirc Pump C2</a></td>
+                    <td class="info"><a href="#panel12">Recirc Pump C1</a></td>
+                </tr>
+            </table>
+        </details>
+
+        
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Koyot Digital</p> Our Discord Server, <a href="https://discord.gg/RT3Y6egQhR"><i class="fa-brands fa-discord"> Koyot Digital</i></a> <br> Play on <a href="https://www.roblox.com/games/15684145480/Oakridge-Nuclear-Power-Station-V0-2-4-BETA" target="_blank" rel="noopener"><i>Roblox</i></a>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
+
+<style>
+    .info-table {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: separate; /* Change from collapse to separate */
+        border-spacing: 8px; /* Add space between cells (adjust px as needed) */
+        padding: 0.2rem;
+    }
+    .info-table td {
+        border: 2px solid #333;
+        padding: 20px;
+        text-align: center;
+        color: black;
+        font-weight: bold;
+        font-size: 1.1em;
+        cursor: pointer;
+        transition: background-back 0.3s, color 0.3s;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+    }
+    .info-table td a {
+        color: inherit;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .info-table td:hover {
+        filter: brightness(1.15);
+        box-shadow: 0 0 8px #aaa;
+    }
+    .critical { 
+        background: #ff4d4d;
+        color: #111;
+    }
+    .warning {
+        background: #fff566;
+        color: #111;
+    }
+    .info {
+        background: #fff;
+        color: #111;
+    }
+    .details {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: separate;
+        border-spacing: 0.5rem;
+        border: 1px solid #444;
+        padding: 0.2rem;
+        margin-bottom: 2em;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(128,199,255,0.1);
+        background-color: #1c1c1c;
+        transition: background-color 0.3s;
+    }
+
+    .details:hover {
+        background-color: #232323;
+    }
+
+    .summary {
+        font-weight: bold;
+        font-size: 1.15em;
+        cursor: pointer;
+        outline: none;
+        padding: 1em 1.5em;
+        color: #fff;
+        background: none;
+        border: none;
+    }
+</style>
