@@ -11,7 +11,11 @@
   <link rel="manifest" href="/site.webmanifest">
 </head>
 <body class="articles-section">
-    <h2>Articles</h2>
+        <div class="articles-header">
+          <h2>Articles</h2>
+          <input type="text" id="articleSearch" placeholder="Search articles..." />
+        </div>
+
         <div class="articles-grid initial-articles">
           <a href="prestart.html" class="article-card">
             <img src="images/Pre Start.webp" alt="Pre-Start Guide" />
@@ -64,6 +68,9 @@
             <h3>Badges</h3>
           </a>
         </div>
+        <p id="no-results-message" style="display: none; text-align: center; margin-top: 1rem; color: #ccc;">
+          No articles found.
+        </p>
         <button class="view-more-btn" aria-expanded="false">View More</button>
 </body>
 </html>

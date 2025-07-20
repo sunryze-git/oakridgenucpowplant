@@ -95,10 +95,66 @@ setTimeout(initializeViewMoreButtons, 500);
       });
     });
   });
-  
-// i touchy script.js :3 - @gargleblaster
+
 fetch('/NavGrid.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('NavGrid-placeholder').innerHTML = data;
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('NavGrid-placeholder').innerHTML = data;
+
+      initializeViewMoreButtons();
+
+      const searchInput = document.getElementById('articleSearch');
+      const viewMoreBtn = document.querySelector('.view-more-btn');
+      const moreGrid = document.querySelector('.more-articles');
+      const noResultsMsg = document.getElementById('no-results-message');
+
+      if (searchInput) {
+        searchInput.addEventListener('input', () => {
+          const query = searchInput.value.toLowerCase();
+          const cards = document.querySelectorAll('.article-card');
+          let foundMatch = false;
+          let firstMatch = null;
+
+          cards.forEach(card => {
+            const title = card.querySelector('h3').textContent.toLowerCase();
+            const isMatch = title.includes(query);
+
+            card.style.display = isMatch ? '' : 'none';
+
+            if (isMatch) {
+              card.closest('.more-articles')?.classList.remove('hidden');
+              if (!firstMatch) firstMatch = card;
+              foundMatch = true;
+            }
+          });
+
+          // Toggle View More button
+          viewMoreBtn.style.display = query.trim() !== '' ? 'none' : '';
+
+          // Reset visibility if empty
+          if (query.trim() === '') {
+            moreGrid.classList.add('hidden');
+            cards.forEach(card => (card.style.display = ''));
+          }
+
+          // Show/hide no-results message
+          if (!foundMatch && query.trim() !== '') {
+            noResultsMsg.style.display = 'block';
+          } else {
+            noResultsMsg.style.display = 'none';
+          }
+
+          // Center first matched article
+          if (firstMatch) {
+            const cardTop = firstMatch.getBoundingClientRect().top + window.scrollY;
+            const offset = window.innerHeight / 2 - firstMatch.offsetHeight / 2;
+            window.scrollTo({
+              top: cardTop - offset,
+              behavior: 'smooth'
+            });
+          }
         });
+      }
+
+    });
+
