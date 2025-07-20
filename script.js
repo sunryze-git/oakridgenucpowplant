@@ -80,3 +80,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   
+// i touchy script.js :3 - @gargleblaster
+fetch('/NavGrid.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('NavGrid-placeholder').innerHTML = data;
+        });
