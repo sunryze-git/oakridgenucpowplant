@@ -93,7 +93,7 @@ Not sure if your changes fit the site's goals? Ask! Open an Issue and ask. It's 
 ### 🏷️ Common Gotchas
 
 **HTML Syntax:**
-If you're new to editing HTML, focus on changing the text content rather than the structural tags. When in doubt, look at how similar content is formatted on other pages.
+If you're new to editing HTML, focus on changing the text content rather than the structural tags. When in doubt, look at how similar content is formatted on other pages, if you want to actualy use tags, @gargleblaster-RMBK has made a helpful page to learn HTML at [https://gargleblaster-rbmk.github.io/](https://gargleblaster-rbmk.github.io/)
 
 **Image Problems:**
 Remember that only `.webp` files work, and they should be compressed to keep the site loading quickly. Large image files can make pages painfully slow to load.
