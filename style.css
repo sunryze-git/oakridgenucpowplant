@@ -355,10 +355,28 @@ html {
   margin-bottom: 0.5rem;
   color: #80c7ff;
 }
-.location-content p {
+.location-content {
   margin-top: 0.5rem;
   color: #ccc;
 }
+
+.startup-video video {
+  max-width: 100%;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(128, 199, 255, 0.3);
+}
+
+.Links {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  color: #f10202;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
 
 /* articles Sec*/
 
