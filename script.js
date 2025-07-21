@@ -3,13 +3,11 @@ function initializeViewMoreButtons() {
   const buttons = document.querySelectorAll('.view-more-btn');
 
   if (buttons.length === 0) {
-    // If buttons don't exist yet, try again
     setTimeout(initializeViewMoreButtons, 100);
     return;
   }
 
   buttons.forEach(button => {
-    // Check if this button already has a listener to avoid duplicates
     if (button.hasAttribute('data-initialized')) return;
 
     button.setAttribute('data-initialized', 'true');
@@ -35,12 +33,9 @@ function initializeViewMoreButtons() {
   });
 }
 
-// Try to initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', initializeViewMoreButtons);
 
-// Also try to initialize after a short delay in case content loads later
 setTimeout(initializeViewMoreButtons, 500);
-/* END OF SCRIPT */
 
   const heroImages = [
     "images/banner1.webp",
@@ -103,58 +98,39 @@ fetch('/NavGrid.html')
 
       initializeViewMoreButtons();
 
-      const searchInput = document.getElementById('articleSearch');
-      const viewMoreBtn = document.querySelector('.view-more-btn');
-      const moreGrid = document.querySelector('.more-articles');
-      const noResultsMsg = document.getElementById('no-results-message');
-
-      if (searchInput) {
-        searchInput.addEventListener('input', () => {
-          const query = searchInput.value.toLowerCase();
-          const cards = document.querySelectorAll('.article-card');
-          let foundMatch = false;
-          let firstMatch = null;
-
-          cards.forEach(card => {
-            const title = card.querySelector('h3').textContent.toLowerCase();
-            const isMatch = title.includes(query);
-
-            card.style.display = isMatch ? '' : 'none';
-
-            if (isMatch) {
-              card.closest('.more-articles')?.classList.remove('hidden');
-              if (!firstMatch) firstMatch = card;
-              foundMatch = true;
-            }
-          });
-
-          // Toggle View More button
-          viewMoreBtn.style.display = query.trim() !== '' ? 'none' : '';
-
-          // Reset visibility if empty
-          if (query.trim() === '') {
-            moreGrid.classList.add('hidden');
-            cards.forEach(card => (card.style.display = ''));
-          }
-
-          // Show/hide no-results message
-          if (!foundMatch && query.trim() !== '') {
-            noResultsMsg.style.display = 'block';
-          } else {
-            noResultsMsg.style.display = 'none';
-          }
-
-          // Center first matched article
-          if (firstMatch) {
-            const cardTop = firstMatch.getBoundingClientRect().top + window.scrollY;
-            const offset = window.innerHeight / 2 - firstMatch.offsetHeight / 2;
-            window.scrollTo({
-              top: cardTop - offset,
-              behavior: 'smooth'
-            });
-          }
-        });
-      }
-
+      initializeArticleSearch();
     });
+
+function initializeArticleSearch() {
+  const searchInput = document.getElementById('articleSearch');
+  const viewMoreBtn = document.querySelector('.view-more-btn');
+  const moreGrid = document.querySelector('.more-articles');
+  const noResultsMsg = document.getElementById('no-results-message');
+
+  if (!searchInput || !noResultsMsg) return; // fail safe
+
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.toLowerCase();
+    const cards = document.querySelectorAll('.article-card');
+    let matchesFound = 0;
+
+    cards.forEach(card => {
+      const title = card.querySelector('h3').textContent.toLowerCase();
+      const match = title.includes(query);
+      card.style.display = match ? '' : 'none';
+      if (match) matchesFound++;
+    });
+
+    noResultsMsg.style.display = matchesFound === 0 && query.trim() !== '' ? 'block' : 'none';
+
+    viewMoreBtn.style.display = query.trim() !== '' ? 'none' : '';
+
+    if (query.trim() === '') {
+      moreGrid.classList.add('hidden');
+      cards.forEach(card => (card.style.display = ''));
+      noResultsMsg.style.display = 'none';
+    }
+  });
+
+}
 
