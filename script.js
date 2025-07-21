@@ -104,49 +104,60 @@ fetch('/NavGrid.html')
 function initializeArticleSearch() {
   const searchInput = document.getElementById('articleSearch');
   const viewMoreBtn = document.querySelector('.view-more-btn');
+  const grid = document.querySelector('.articles-grid');
   const moreGrid = document.querySelector('.more-articles');
-  const mainGrid = document.querySelector('.articles-grid'); // ⬅️ Your main section
   const noResultsMsg = document.getElementById('no-results-message');
 
-  if (!searchInput || !noResultsMsg || !moreGrid || !mainGrid) return;
+  if (!searchInput || !noResultsMsg) return;
 
   searchInput.addEventListener('input', () => {
     const query = searchInput.value.toLowerCase().trim();
-    const allCards = document.querySelectorAll('.article-card');
-    const mainCards = mainGrid.querySelectorAll('.article-card');
-    let matchesFound = 0;
-    let mainMatchesFound = 0;
+    const gridCards = grid.querySelectorAll('.article-card');
+    const moreCards = moreGrid.querySelectorAll('.article-card');
 
-    const isSearching = query !== '';
+    let gridMatches = 0;
+    let moreMatches = 0;
 
-    allCards.forEach(card => {
+
+    gridCards.forEach(card => {
       const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
       const match = title.includes(query);
-      card.style.display = match || !isSearching ? '' : 'none';
-      if (match) matchesFound++;
+      card.style.display = match || !query ? '' : 'none';
+      if (match) gridMatches++;
     });
 
-    mainCards.forEach(card => {
-      const isVisible = card.style.display !== 'none';
-      if (isVisible) mainMatchesFound++;
+    moreCards.forEach(card => {
+      const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
+      const match = title.includes(query);
+      card.style.display = match || !query ? '' : 'none';
+      if (match) moreMatches++;
     });
 
-    mainGrid.style.display = mainMatchesFound > 0 || !isSearching ? 'grid' : 'none';
-
-    if (isSearching) {
-      moreGrid.classList.remove('hidden');
-      viewMoreBtn.style.display = 'none';
-      viewMoreBtn.setAttribute('aria-expanded', 'true');
-      moreGrid.setAttribute('aria-hidden', 'false');
-    } else {
+    if (!query) {
+      // Reset to default state
+      grid.style.display = '';
       moreGrid.classList.add('hidden');
       viewMoreBtn.style.display = '';
-      viewMoreBtn.setAttribute('aria-expanded', 'false');
-      moreGrid.setAttribute('aria-hidden', 'true');
-    }
+      noResultsMsg.style.display = 'none';
+    } else {
+      viewMoreBtn.style.display = 'none';
 
-    noResultsMsg.style.display = matchesFound === 0 && isSearching ? 'block' : 'none';
+      if (gridMatches > 0 && moreMatches === 0) {
+        grid.style.display = '';
+        moreGrid.classList.add('hidden');
+      } else if (moreMatches > 0 && gridMatches === 0) {
+        grid.style.display = 'none';
+        moreGrid.classList.remove('hidden');
+      } else if (gridMatches > 0 && moreMatches > 0) {
+        grid.style.display = '';
+        moreGrid.classList.remove('hidden');
+      } else {
+        grid.style.display = 'none';
+        moreGrid.classList.add('hidden');
+      }
+
+      noResultsMsg.style.display = (gridMatches + moreMatches === 0) ? 'block' : 'none';
+    }
   });
 }
-
 
