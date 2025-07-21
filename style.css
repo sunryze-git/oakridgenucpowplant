@@ -6,17 +6,42 @@
   box-sizing: border-box;
 }
 
-/* */
-
 body {
-  background-color: #121212;
-  color: #e0e0e0;
   font-family: system-ui, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
   line-height: 1.6;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  padding: 1rem;
 }
+
+.NavGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+
+.NavLink {
+  background-color: #1e1e1e;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  color: #00bfff;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.2);
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.NavLink:hover {
+  background-color: #00bfff;
+  color: #121212;
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
+}
+
+
 header {
   background-color: #1c1c1c;
   border-bottom: 1px solid #444;
@@ -26,6 +51,7 @@ header {
 }
 html {
   scroll-behavior: smooth;
+  overflow-y: scroll;
 }
 #dev-credits {
   margin-top: 3rem;
@@ -271,6 +297,8 @@ html {
 .hero-content p a:hover, .hero-content p a:focus {
   text-decoration: underline;
 }
+
+
 .container {
   max-width: 1100px;
   margin: 2rem auto;
@@ -355,6 +383,133 @@ html {
   margin-bottom: 0.5rem;
   color: #80c7ff;
 }
+
+
+#no-results-message {
+  display: none;
+  color: #ccc;
+  text-align: center;
+  padding-bottom: 10%;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+
+.article-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  min-height: 100px;
+  max-height: 300px;
+  width: 100%;
+}
+.article-container {
+  flex-wrap: wrap;
+  align-items: stretch;
+  align-content: flex-start;
+  justify-content: center;
+}
+
+.badges-section {
+  min-height: 600px;
+  transition: min-height 0.3s ease;
+}
+
+.article {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #ccc;
+  font-size: 1.2rem;
+  padding: 2rem 0;
+}
+
+@media (max-width: 600px) {
+  .badges-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  min-height: 300px;
+}
+
+.badge-card {
+  background: #1a1a1a;
+  padding: 1rem;
+  border-radius: 8px;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+
+.badge-card:hover {
+  transform: scale(1.02);
+}
+
+.no-results-message {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #999;
+  padding: 2rem 0;
+}
+
+
+
+.articles-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+
+.articles-header h2 {
+  margin: 0;
+  white-space: nowrap;
+  font-size: 1.5rem;
+}
+
+#articleSearch {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #1a1a1a;
+  color: #fff;
+  min-width: 200px;
+  max-width: 100%;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#articleSearch:focus {
+  border-color: #3fa9f5;
+  box-shadow: 0 0 5px rgba(63, 169, 245, 0.5);
+}
+
+#articleSearch {
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23ccc" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM9.5 14C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+  padding-right: 2.5rem;
+}
+
 .location-content {
   margin-top: 0.5rem;
   color: #ccc;
@@ -370,7 +525,6 @@ html {
 .Links {
   display: block;
   text-align: center;
-  margin: 0 auto;
   color: #f10202;
   font-weight: bold;
   text-decoration: none;
@@ -381,9 +535,10 @@ html {
 /* articles Sec*/
 
 .articles-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  min-height: 100px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
   margin: 1rem;
 }
 .article-card {
@@ -561,6 +716,7 @@ ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
+  min-height: 300px;
   padding: 2rem 0;
 }
 
