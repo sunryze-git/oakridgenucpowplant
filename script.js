@@ -110,27 +110,31 @@ function initializeArticleSearch() {
   if (!searchInput || !noResultsMsg) return; // fail safe
 
   searchInput.addEventListener('input', () => {
-    const query = searchInput.value.toLowerCase();
+    const query = searchInput.value.toLowerCase().trim();
     const cards = document.querySelectorAll('.article-card');
     let matchesFound = 0;
+
+    const isSearching = query !== '';
+    if (isSearching) {
+      moreGrid.classList.remove('hidden');
+      viewMoreBtn.style.display = 'none';
+      viewMoreBtn.setAttribute('aria-expanded', 'true');
+      moreGrid.setAttribute('aria-hidden', 'false');
+    } else {
+      moreGrid.classList.add('hidden');
+      viewMoreBtn.style.display = '';
+      viewMoreBtn.setAttribute('aria-expanded', 'false');
+      moreGrid.setAttribute('aria-hidden', 'true');
+    }
 
     cards.forEach(card => {
       const title = card.querySelector('h3').textContent.toLowerCase();
       const match = title.includes(query);
-      card.style.display = match ? '' : 'none';
+      card.style.display = match || !isSearching ? '' : 'none';
       if (match) matchesFound++;
     });
 
-    noResultsMsg.style.display = matchesFound === 0 && query.trim() !== '' ? 'block' : 'none';
-
-    viewMoreBtn.style.display = query.trim() !== '' ? 'none' : '';
-
-    if (query.trim() === '') {
-      moreGrid.classList.add('hidden');
-      cards.forEach(card => (card.style.display = ''));
-      noResultsMsg.style.display = 'none';
-    }
+    noResultsMsg.style.display = matchesFound === 0 && isSearching ? 'block' : 'none';
   });
-
 }
 
