@@ -105,16 +105,34 @@ function initializeArticleSearch() {
   const searchInput = document.getElementById('articleSearch');
   const viewMoreBtn = document.querySelector('.view-more-btn');
   const moreGrid = document.querySelector('.more-articles');
+  const mainGrid = document.querySelector('.articles-grid'); // ⬅️ Your main section
   const noResultsMsg = document.getElementById('no-results-message');
 
-  if (!searchInput || !noResultsMsg) return; // fail safe
+  if (!searchInput || !noResultsMsg || !moreGrid || !mainGrid) return;
 
   searchInput.addEventListener('input', () => {
     const query = searchInput.value.toLowerCase().trim();
-    const cards = document.querySelectorAll('.article-card');
+    const allCards = document.querySelectorAll('.article-card');
+    const mainCards = mainGrid.querySelectorAll('.article-card');
     let matchesFound = 0;
+    let mainMatchesFound = 0;
 
     const isSearching = query !== '';
+
+    allCards.forEach(card => {
+      const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
+      const match = title.includes(query);
+      card.style.display = match || !isSearching ? '' : 'none';
+      if (match) matchesFound++;
+    });
+
+    mainCards.forEach(card => {
+      const isVisible = card.style.display !== 'none';
+      if (isVisible) mainMatchesFound++;
+    });
+
+    mainGrid.style.display = mainMatchesFound > 0 || !isSearching ? 'grid' : 'none';
+
     if (isSearching) {
       moreGrid.classList.remove('hidden');
       viewMoreBtn.style.display = 'none';
@@ -127,14 +145,8 @@ function initializeArticleSearch() {
       moreGrid.setAttribute('aria-hidden', 'true');
     }
 
-    cards.forEach(card => {
-      const title = card.querySelector('h3').textContent.toLowerCase();
-      const match = title.includes(query);
-      card.style.display = match || !isSearching ? '' : 'none';
-      if (match) matchesFound++;
-    });
-
     noResultsMsg.style.display = matchesFound === 0 && isSearching ? 'block' : 'none';
   });
 }
+
 
