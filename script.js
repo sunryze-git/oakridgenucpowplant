@@ -3,13 +3,11 @@ function initializeViewMoreButtons() {
   const buttons = document.querySelectorAll('.view-more-btn');
 
   if (buttons.length === 0) {
-    // If buttons don't exist yet, try again
     setTimeout(initializeViewMoreButtons, 100);
     return;
   }
 
   buttons.forEach(button => {
-    // Check if this button already has a listener to avoid duplicates
     if (button.hasAttribute('data-initialized')) return;
 
     button.setAttribute('data-initialized', 'true');
@@ -35,12 +33,9 @@ function initializeViewMoreButtons() {
   });
 }
 
-// Try to initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', initializeViewMoreButtons);
 
-// Also try to initialize after a short delay in case content loads later
 setTimeout(initializeViewMoreButtons, 500);
-/* END OF SCRIPT */
 
   const heroImages = [
     "images/banner1.webp",
@@ -95,10 +90,74 @@ setTimeout(initializeViewMoreButtons, 500);
       });
     });
   });
-  
-// i touchy script.js :3 - @gargleblaster
+
 fetch('/NavGrid.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('NavGrid-placeholder').innerHTML = data;
-        });
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('NavGrid-placeholder').innerHTML = data;
+
+      initializeViewMoreButtons();
+
+      initializeArticleSearch();
+    });
+
+function initializeArticleSearch() {
+  const searchInput = document.getElementById('articleSearch');
+  const viewMoreBtn = document.querySelector('.view-more-btn');
+  const grid = document.querySelector('.articles-grid');
+  const moreGrid = document.querySelector('.more-articles');
+  const noResultsMsg = document.getElementById('no-results-message');
+
+  if (!searchInput || !noResultsMsg) return;
+
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.toLowerCase().trim();
+    const gridCards = grid.querySelectorAll('.article-card');
+    const moreCards = moreGrid.querySelectorAll('.article-card');
+
+    let gridMatches = 0;
+    let moreMatches = 0;
+
+
+    gridCards.forEach(card => {
+      const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
+      const match = title.includes(query);
+      card.style.display = match || !query ? '' : 'none';
+      if (match) gridMatches++;
+    });
+
+    moreCards.forEach(card => {
+      const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
+      const match = title.includes(query);
+      card.style.display = match || !query ? '' : 'none';
+      if (match) moreMatches++;
+    });
+
+    if (!query) {
+      // Reset to default state
+      grid.style.display = '';
+      moreGrid.classList.add('hidden');
+      viewMoreBtn.style.display = '';
+      noResultsMsg.style.display = 'none';
+    } else {
+      viewMoreBtn.style.display = 'none';
+
+      if (gridMatches > 0 && moreMatches === 0) {
+        grid.style.display = '';
+        moreGrid.classList.add('hidden');
+      } else if (moreMatches > 0 && gridMatches === 0) {
+        grid.style.display = 'none';
+        moreGrid.classList.remove('hidden');
+      } else if (gridMatches > 0 && moreMatches > 0) {
+        grid.style.display = '';
+        moreGrid.classList.remove('hidden');
+      } else {
+        grid.style.display = 'none';
+        moreGrid.classList.add('hidden');
+      }
+
+      noResultsMsg.style.display = (gridMatches + moreMatches === 0) ? 'block' : 'none';
+    }
+  });
+}
+
